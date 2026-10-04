@@ -1,144 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kulwinder Singh — Marketing Automation, CRM and Customer Lifecycle Marketing portfolio.">
-  <meta name="theme-color" content="#111d2d">
-  <title>Kulwinder Singh | Lifecycle Marketing & Automation</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kulwinder Singh | CRM, Lifecycle Marketing & Automation</title>
+<meta name="description" content="Senior CRM & Lifecycle Marketing Manager. Lifecycle programs for a 10M+ user base, 40M messages a month across email, SMS, push and in-app. Klaviyo, MoEngage, HubSpot, Salesforce Marketing Cloud.">
+<meta property="og:title" content="Kulwinder Singh | CRM, Lifecycle Marketing & Automation">
+<meta property="og:description" content="10M+ users, 40M messages a month, +40% YoY revenue growth, +30% retention. Lifecycle strategy, automation and deliverability.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16213a;--paper:#f7f8fb;--panel:#ffffff;--line:#d9deea;--muted:#56607a;--teal:#0b8f7e;--amber:#e9a31c;--soft:#e8f4f1}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--ink:#e8ecf7;--paper:#0f1626;--panel:#172036;--line:#2a3550;--muted:#a3adc7;--teal:#3fd0b9;--amber:#f3b840;--soft:#12302f}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;line-height:1.15;margin:0}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);z-index:5}
+nav{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:12px 0;flex-wrap:wrap}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px}
+nav div{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--teal)}
+.hero{padding:64px 0 40px}
+.hero h1{font-size:clamp(36px,6.4vw,68px);max-width:15ch;font-weight:700;letter-spacing:-.02em}
+.hero p.lead{font-size:clamp(18px,2.2vw,21px);max-width:60ch;color:var(--muted);margin:22px 0 28px}
+.btn{display:inline-block;padding:12px 20px;border-radius:6px;font-weight:600;text-decoration:none;margin:0 10px 10px 0;border:2px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--paper)}
+.btn.alt{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;border:1px solid var(--line);background:var(--panel);margin-top:34px}
+.stats div{padding:18px 20px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats strong{display:block;font:700 34px "Bricolage Grotesque",sans-serif;color:var(--teal)}
+.stats span{font-size:14px;color:var(--muted)}
+section{padding:54px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(28px,4vw,40px);margin-bottom:10px}
+.sub{color:var(--muted);max-width:66ch;margin:0 0 28px}
+.rail{display:grid;gap:10px}
+details.stage{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--teal);border-radius:4px}
+details.stage:nth-child(even){border-left-color:var(--amber)}
+details.stage summary{cursor:pointer;padding:14px 18px;font-weight:600;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;list-style:none}
+details.stage summary::-webkit-details-marker{display:none}
+details.stage summary small{font-weight:400;color:var(--muted)}
+details.stage dl{margin:0;padding:0 18px 16px;display:grid;grid-template-columns:110px 1fr;gap:6px 14px;font-size:15.5px}
+details.stage dt{color:var(--muted)}
+details.stage dd{margin:0}
+.rules{margin-top:22px;background:var(--soft);padding:18px 22px;border-radius:4px}
+.rules h3{font-size:19px;margin-bottom:8px}
+.rules ul{margin:0;padding-left:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);padding:22px;border-radius:4px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card .big{font:700 40px "Bricolage Grotesque",sans-serif;color:var(--teal);line-height:1}
+.card p{margin:8px 0 0;font-size:15.5px}
+.card .k{font-size:13.5px;color:var(--muted);margin-top:12px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 22px;padding:0;list-style:none}
+.flow li{background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:4px;font-size:15px;font-weight:500}
+.flow li+li::before{content:"\2192";margin-right:10px;color:var(--amber)}
+.tl{list-style:none;margin:0;padding:0;border-left:3px solid var(--line)}
+.tl li{padding:0 0 22px 22px;position:relative}
+.tl li::before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--paper);border:3px solid var(--teal)}
+.tl li:first-child::before{background:var(--teal)}
+.tl b{display:block}
+.tl span{color:var(--muted);font-size:15px}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.cert{background:var(--panel);border:1px solid var(--line);padding:16px 18px;border-radius:4px}
+.cert b{display:block;font-size:17px}
+.cert.k{display:flex;gap:14px;align-items:center}.cert.k img{flex:none;border-radius:50%}.cert.doc img{width:88px;height:auto;border-radius:4px;border:1px solid var(--line)}.cert a{color:inherit;text-decoration-color:var(--teal);text-underline-offset:3px}.cert a:hover{color:var(--teal)}.cert span{display:block;font-size:14px;color:var(--muted)}
+h3.grp{font-size:20px;margin:30px 0 12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none;margin:0}
+.tags li{border:1px solid var(--line);background:var(--panel);padding:5px 12px;border-radius:99px;font-size:14.5px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+footer{padding:36px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+@media (max-width:560px){details.stage dl{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid var(--line)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="#home"><span class="brand-mark">KS</span><span>KULWINDER SINGH<small>MARKETING TECHNOLOGY</small></span></a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-  <nav id="navigation" aria-label="Main navigation">
-    <a href="#work">Work</a><a href="#automation">Automation</a><a href="#dashboard">Analytics</a>
-    <a href="#certifications">Certifications</a><a class="nav-cta" href="#contact">Contact ↗</a>
-  </nav>
-</header>
+<header><div class="wrap"><nav>
+<b>Kulwinder Singh</b>
+<div><a href="#lifecycle">Lifecycle</a><a href="#impact">Impact</a><a href="#systems">Automation</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></div>
+</nav></div></header>
 
-<main id="home">
-<section class="hero wrap">
-  <div class="hero-copy">
-    <p class="eyebrow"><span class="status-dot"></span> LIFECYCLE STRATEGY · AUTOMATION · ANALYTICS</p>
-    <h1>Make every customer interaction <em>count.</em></h1>
-    <p class="lead">I connect customer data, lifecycle strategy and marketing technology to build personalized journeys, reliable campaign operations and measurable growth.</p>
-    <div class="actions"><a class="button button-dark" href="#work">Explore my work <span>↘</span></a><a class="button button-light" href="#contact">Let’s connect ↗</a></div>
-    <div class="profile-line"><span class="avatar">KS</span><span><b>Marketing Automation & Customer Lifecycle Specialist</b><small>7.5+ years of marketing experience · India</small></span></div>
-  </div>
-  <div class="journey-visual">
-    <div class="visual-label"><span class="status-dot"></span> CUSTOMER JOURNEY OVERVIEW <span class="demo-label">DEMO</span></div>
-    <div class="journey-box">
-      <div class="journey-step"><span class="step-icon">◎</span><span><b>Customer signal</b><small>Signup · purchase · engagement</small></span><i>Received</i></div>
-      <div class="journey-connector"></div>
-      <div class="journey-step"><span class="step-icon teal">⌘</span><span><b>Decision & segmentation</b><small>Behavior · consent · lifecycle stage</small></span><i>Qualified</i></div>
-      <div class="journey-connector"></div>
-      <div class="journey-step"><span class="step-icon purple">✳</span><span><b>Personalized journey</b><small>Email · message · next best action</small></span><i>Ready</i></div>
-      <div class="journey-connector"></div>
-      <div class="journey-step"><span class="step-icon gold">↗</span><span><b>Measure & optimize</b><small>Conversion · retention · revenue</small></span><i>Learn</i></div>
-    </div>
-    <div class="visual-footer"><span>Built around customer context</span><span>Not just sends — systems.</span></div>
-  </div>
-  <div class="hero-tools"><span>SELECTED CAPABILITIES</span><b>Klaviyo</b> · <b>MoEngage</b> · <b>HubSpot</b> · <b>APIs</b> · <b>HTML/CSS</b> · <b>Analytics</b></div>
-</section>
+<main>
+<div class="wrap hero" id="home">
+<h1>Lifecycle programs that keep customers coming back.</h1>
+<p class="lead">I'm a Senior CRM &amp; Lifecycle Marketing Manager. I design the journeys, build the automation and protect the deliverability behind 40M messages a month across email, SMS, push and in-app, for a 10M+ user base.</p>
+<a class="btn main" href="#impact">See the results</a><a class="btn alt" href="#contact">Get in touch</a>
+<div class="stats">
+<div><strong>+40%</strong><span>year-over-year revenue growth</span></div>
+<div><strong>+30%</strong><span>year-over-year retention improvement</span></div>
+<div><strong>10M+</strong><span>users managed</span></div>
+<div><strong>40M</strong><span>messages sent each month</span></div>
+</div>
+<p style="margin:10px 0 0;font-size:14.5px;color:var(--muted)">All four figures are from my current role as Team Lead, Email Marketing at Way.com (May 2025 to present).</p>
+</div>
 
-<section class="metrics-band">
-  <div><strong>7.5+</strong><span>Years in marketing*</span></div><div><strong>6</strong><span>Klaviyo certifications*</span></div>
-  <div><strong>API-first</strong><span>Execution mindset</span></div><div><strong>End-to-end</strong><span>Lifecycle thinking</span></div>
-  <p>*Profile details supplied by Kulwinder. Confirm all details before public sharing.</p>
-</section>
+<section id="lifecycle"><div class="wrap">
+<h2>How I design a lifecycle</h2>
+<p class="sub">Every stage has a trigger, a goal, a metric and an exit. Open a stage to see the logic I build into it.</p>
+<div class="rail">
+<details class="stage" open><summary>Welcome and onboarding <small>Signup to first value</small></summary><dl>
+<dt>Trigger</dt><dd>Signup or first consented subscription</dd>
+<dt>Goal</dt><dd>First action or first purchase</dd>
+<dt>Logic</dt><dd>Branch on behavior after the first email: engaged contacts get education, quiet ones get alternate content and a different send time</dd>
+<dt>Exit</dt><dd>Goal reached, unsubscribe, or sequence complete</dd>
+<dt>Metric</dt><dd>Activation rate, time to first purchase</dd></dl></details>
+<details class="stage"><summary>Conversion <small>Browse and cart behavior</small></summary><dl>
+<dt>Trigger</dt><dd>Viewed product, started checkout, or scored as high intent</dd>
+<dt>Goal</dt><dd>Completed order</dd>
+<dt>Logic</dt><dd>Behavioral segments and lead scoring decide who gets a message, and which one</dd>
+<dt>Exit</dt><dd>Purchase or inactivity window ends</dd>
+<dt>Metric</dt><dd>Conversion rate, revenue per recipient</dd></dl></details>
+<details class="stage"><summary>Post-purchase and loyalty <small>Repeat and advocacy</small></summary><dl>
+<dt>Trigger</dt><dd>Order placed, delivered, or loyalty threshold reached</dd>
+<dt>Goal</dt><dd>Second purchase, higher lifetime value</dd>
+<dt>Logic</dt><dd>Product-aware follow-ups and loyalty messaging, tested against a holdout group</dd>
+<dt>Exit</dt><dd>Next purchase restarts the cycle</dd>
+<dt>Metric</dt><dd>Repeat purchase rate, retention by cohort</dd></dl></details>
+<details class="stage"><summary>At-risk and win-back <small>Before a customer is lost</small></summary><dl>
+<dt>Trigger</dt><dd>Engagement or purchase gap beyond that segment's normal interval</dd>
+<dt>Goal</dt><dd>Reactivate before the customer lapses</dd>
+<dt>Logic</dt><dd>Escalate from relevance to incentive, and stop when the person re-engages</dd>
+<dt>Exit</dt><dd>Reactivated, or moved to sunset</dd>
+<dt>Metric</dt><dd>Reactivation rate, incremental revenue</dd></dl></details>
+<details class="stage"><summary>Sunset <small>Protect the sender reputation</small></summary><dl>
+<dt>Trigger</dt><dd>No engagement after the win-back sequence</dd>
+<dt>Goal</dt><dd>Keep the list healthy and inbox placement high</dd>
+<dt>Logic</dt><dd>Suppress unengaged contacts and review bounce and complaint rates by segment</dd>
+<dt>Exit</dt><dd>Removed from active sending</dd>
+<dt>Metric</dt><dd>Complaint rate, bounce rate, inbox placement</dd></dl></details>
+</div>
+<div class="rules"><h3>Rules that apply across every flow</h3><ul>
+<li>Flow priority: a transactional or purchase-based message always outranks a promotional one.</li>
+<li>Suppression: a recent purchase pauses win-back and discount messaging.</li>
+<li>Frequency caps per channel, so email, SMS, push and in-app do not stack on the same person.</li>
+<li>Consent and preferences checked before every send (GDPR, CAN-SPAM, CASL).</li>
+</ul></div>
+</div></section>
 
-<section class="section wrap">
-  <p class="eyebrow">01 / THE PROFILE</p>
-  <div class="two-col"><h2>Strategy-minded.<br><em>Technically hands-on.</em></h2>
-    <div><p>I work across the lifecycle marketing process: understanding customer behavior, mapping journeys, building segmentation and automation, developing email experiences, connecting systems through APIs, and translating performance data into the next experiment.</p>
-    <p>My focus is making marketing operations more consistent, measurable and scalable through native platform capabilities, well-designed workflows and thoughtful AI assistance.</p>
-    <div class="chips"><span>Lifecycle design</span><span>ESP operations</span><span>API integrations</span><span>AI-assisted workflows</span><span>Performance analysis</span></div></div>
-  </div>
-</section>
+<section id="impact"><div class="wrap">
+<h2>Results</h2>
+<p class="sub">The first two results are from my current role at Way.com, where I run lifecycle programs for 10M+ users and about 40M messages a month. The others come from earlier work. I'm happy to walk through the baseline, attribution method and approach for any of them.</p>
+<div class="grid">
+<article class="card"><div class="big">+40%</div><h3>Revenue growth</h3>
+<p>Year-over-year growth, with about 10% month-over-month, driven by advanced segmentation, automation and engagement programs on a 10M+ user base.</p><p class="k">Way.com · Segmentation · Automation · Engagement</p></article>
+<article class="card"><div class="big">+30%</div><h3>Retention</h3>
+<p>Built lifecycle infrastructure from scratch, from acquisition and onboarding through loyalty and reactivation, using personalized journeys and behavioral targeting.</p><p class="k">Way.com · Journeys · Behavioral targeting · Loyalty</p></article>
+<article class="card"><div class="big">+20%</div><h3>Engagement</h3>
+<p>Raised customer engagement year over year by managing lifecycle programs across HubSpot, Mailchimp and Saleshandy.</p><p class="k">HubSpot · Mailchimp · Saleshandy</p></article>
+<article class="card"><div class="big">+15%</div><h3>Opens and clicks</h3>
+<p>Improved open rates and click-through rates with personalization and a systematic A/B testing practice.</p><p class="k">Personalization · A/B testing</p></article>
+<article class="card"><div class="big">30</div><h3>People led</h3>
+<p>Led, trained and managed a team of 30 across CRM, marketing and operations.</p><p class="k">Team leadership · Training</p></article>
+<article class="card"><div class="big">4</div><h3>Channels</h3>
+<p>Ran omnichannel lifecycle campaigns across email, SMS, push and in-app through MoEngage and Salesforce Marketing Cloud.</p><p class="k">MoEngage · Salesforce MC</p></article>
+</div>
+<h3 class="grp">How I got there at Way.com</h3>
+<div class="grid">
+<article class="card"><h3>Automation and AI</h3><p>Built automated lifecycle journeys and brought AI into the workflow, so the program could scale across a 10M+ user base without adding manual work.</p></article>
+<article class="card"><h3>Better segmentation</h3><p>Moved from broad sends to behavior-based segments, so each group gets messages that match what it has actually done.</p></article>
+<article class="card"><h3>Email fundamentals</h3><p>Kept the basics strong: SPF, DKIM and DMARC, list hygiene, A/B testing and compliance, so growth did not cost inbox placement.</p></article>
+</div>
+<h3 class="grp">Recognition at Way.com</h3>
+<ul class="tags"><li>CEO Recognition Award, within my first nine months</li><li>Wayfarer Award, twice</li></ul>
+</div></section>
 
-<section class="section section-soft" id="work">
-  <div class="wrap"><p class="eyebrow">02 / SELECTED WORK</p>
-  <div class="section-heading"><div><h2>Proof of work, <em>not just promises.</em></h2><p>Independent portfolio demonstrations using sample content and fictional data.</p></div><span class="outline-label">DEMO PROJECTS</span></div>
-  <div class="project-grid">
-    <article class="project project-featured">
-      <div class="art email-art"><div class="email-mock">
-        <div class="mock-top"><span>● ● ●</span><small>CAMPAIGN PREVIEW</small></div>
-        <div class="mock-hero"><small>THE WEEKEND EDIT</small><h3>Good design.<br>Better everyday.</h3><span>DISCOVER THE COLLECTION →</span></div>
-        <div class="mock-products"><div><span class="mock-product"></span><b>Everyday Runner</b><small>$89</small></div><div><span class="mock-product product-alt"></span><b>City Essential</b><small>$110</small></div></div>
-      </div></div>
-      <div class="project-body"><div class="project-meta"><span>01 · EMAIL DEVELOPMENT</span><span class="green-text">HTML SAMPLE</span></div><h3>Responsive campaign email</h3><p>A modular campaign concept with mobile-aware layout, CTA hierarchy, product blocks, and unsubscribe/preferences placeholders.</p><div class="chips"><span>HTML/CSS</span><span>Email QA</span><span>Dynamic content</span></div><div class="button-row"><button class="text-link" data-modal="email">View case study ↗</button><a class="text-link" href="email-template.html" target="_blank" rel="noreferrer">Open HTML template ↗</a></div></div>
-    </article>
-    <article class="project">
-      <div class="art flow-art"><div class="flow-diagram"><div>Signup <small>Trigger</small></div><b>↓</b><div class="flow-active">Welcome email <small>Immediately</small></div><b>↓</b><div>Engagement check <small>Branch by behavior</small></div><b>↙ &nbsp; ↘</b><div class="flow-branches"><span>Education</span><span>Alternate content</span></div><b>↓</b><div>Conversion goal <small>Exit when achieved</small></div></div></div>
-      <div class="project-body"><div class="project-meta"><span>02 · LIFECYCLE</span><span class="green-text">JOURNEY MAP</span></div><h3>Signup to customer loyalty</h3><p>A lifecycle blueprint covering welcome, activation, post-purchase, retention and win-back with decision logic and exit criteria.</p><div class="chips"><span>Event triggers</span><span>Segmentation</span><span>Suppression</span></div><button class="text-link" data-modal="journey">View journey logic ↗</button></div>
-    </article>
-    <article class="project">
-      <div class="art api-art"><div class="console"><div class="console-head">EXECUTION PIPELINE <span>SIMULATED</span></div><p><b>01</b> Validate campaign brief <i>✓</i></p><p><b>02</b> Map fields & audience <i>✓</i></p><p><b>03</b> Prepare API payload <i>✓</i></p><p><b>04</b> Approval checkpoint <i>●</i></p><div class="progress"><span></span></div><small>No real API calls or messages sent</small></div></div>
-      <div class="project-body"><div class="project-meta"><span>03 · MARKETING OPS</span><span class="green-text">INTERACTIVE</span></div><h3>API-powered campaign workflow</h3><p>A safe execution pattern for input validation, audience mapping, payload preparation, human approval and execution logging.</p><div class="chips"><span>REST APIs</span><span>JSON</span><span>QA gates</span></div><button class="text-link" id="runDemo">Run simulated workflow ↗</button><p class="run-result" id="runResult" aria-live="polite"></p></div>
-    </article>
-    <article class="project">
-      <div class="art ai-art"><div class="insight-card"><span class="spark">✳</span><small>AI-ASSISTED INSIGHT · DEMO</small><h3>Retention opportunity</h3><p>Compare repeat-purchase behavior by cohort before increasing campaign frequency.</p><div class="insight-foot">Suggested experiment <b>Review →</b></div></div></div>
-      <div class="project-body"><div class="project-meta"><span>04 · AI + ANALYTICS</span><span class="green-text">SAMPLE DATA</span></div><h3>Lifecycle intelligence dashboard</h3><p>Explore sample campaign KPIs, lifecycle-stage performance and recommendations for the next experiment.</p><div class="chips"><span>KPIs</span><span>Cohorts</span><span>Optimization</span></div><a class="text-link" href="#dashboard">Explore dashboard ↗</a></div>
-    </article>
-  </div></div>
-</section>
+<section id="systems"><div class="wrap">
+<h2>Automation and deliverability</h2>
+<p class="sub">Automation only works when the data is clean, the sending is trusted and a person approves what goes out.</p>
+<ol class="flow"><li>Input</li><li>Validate</li><li>Connect</li><li>Approve</li><li>Measure</li></ol>
+<div class="two">
+<div><h3 class="grp" style="margin-top:0">Automation</h3><ul>
+<li>Salesforce Marketing Cloud journeys with AMPscript dynamic personalization</li>
+<li>REST APIs, webhooks and JSON for connecting the ESP, CRM and data sources</li>
+<li>SQL audience segmentation, lead scoring and attribution models</li>
+<li>Responsive email built in HTML/CSS and MJML (<a href="email-template.html">see the HTML sample</a>)</li>
+<li>Credentials stay server-side, and sends need explicit approval</li></ul></div>
+<div><h3 class="grp" style="margin-top:0">Deliverability</h3><ul>
+<li>SPF, DKIM and DMARC managed end to end</li>
+<li>Domain warm-up and sender reputation management</li>
+<li>List hygiene, inbox placement checks and engagement-based sending</li>
+<li>Compliance review for GDPR, CAN-SPAM and CASL</li>
+<li>Executive dashboards in Tableau, Power BI and GA4</li></ul></div>
+</div>
+</div></section>
 
-<section class="section wrap" id="automation">
-  <p class="eyebrow">03 / AUTOMATION OPERATING MODEL</p><div class="section-heading"><div><h2>Automation with <em>control built in.</em></h2><p>From campaign request to a traceable, quality-checked execution.</p></div></div>
-  <div class="pipeline-grid">
-    <div><span>01</span><b>Input</b><small>Brief · CSV · event data</small></div><div><span>02</span><b>Validate</b><small>Fields · consent · data quality</small></div><div><span>03</span><b>Connect</b><small>API · ESP · CRM</small></div><div><span>04</span><b>Approve</b><small>Preview · QA · human review</small></div><div><span>05</span><b>Measure</b><small>Logs · KPIs · experiments</small></div>
-  </div>
-  <div class="notice"><b>Production principle</b><p>API calls are not the same as a successful campaign. Validate authentication, payloads, permissions, rate limits and response codes. Store credentials server-side and require explicit approval before sending or publishing.</p></div>
-  <div class="code-card"><div class="code-card-head"><span>EXAMPLE · API REQUEST PATTERN</span><button id="copyCode">Copy example</button></div><pre><code>const response = await fetch(ESP_API_URL, {
-  method: "POST",
-  headers: {
-    "Authorization": `Bearer ${API_TOKEN}`,
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(validatedPayload)
-});
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<p class="sub">Eight years across SaaS, FinTech, HealthTech, e-commerce and AI.</p>
+<ul class="tl">
+<li><b>Team Lead, Email Marketing · Way.com</b><span>May 2025 to present · 10M+ users, 40M messages a month, +40% YoY revenue growth, +30% YoY retention</span></li>
+<li><b>Email Marketing Specialist · Silvermine Software India</b><span>May 2024 to Apr 2025</span></li>
+<li><b>Email Marketing Manager · 360 Degree Cloud Technology</b><span>Jan 2023 to Feb 2024</span></li>
+<li><b>Email Marketing Specialist · PhableCare</b><span>May 2022 to Nov 2022</span></li>
+<li><b>Email Marketing Specialist · Bridging Healthcare Technologies</b><span>May 2021 to May 2022</span></li>
+<li><b>Email Marketing Specialist · Codesoftic Tech</b><span>Jan 2019 to May 2021</span></li>
+<li><b>Email Marketing Trainee · OPK E Services</b><span>May 2018 to Dec 2018</span></li>
+</ul>
+</div></section>
 
-if (!response.ok) {
-  // Log a safe error; never expose tokens or customer data.
-  throw new Error("ESP request failed");
-}
-// Record status and request ID for auditability.</code></pre><p>Illustrative pattern only. Use the provider’s current endpoint and payload schema. Never put API keys in frontend JavaScript or GitHub.</p></div>
-</section>
+<section id="credentials"><div class="wrap">
+<h2>Credentials</h2>
+<p class="sub">Certificates are issued by the platforms themselves. Credential IDs are shown where the issuer provides one.</p>
+<h3 class="grp" style="margin-top:0">Klaviyo Academy</h3>
+<div class="certs">
+<div class="cert k"><img src="assets/badges/klaviyo-strategist.png" alt="Klaviyo Strategist badge" width="64" height="64" loading="lazy"><div><b><a href="https://credential.klaviyo.com/9804cfda-18d7-4daf-805d-fe47c6d0bd2b#acc.RQ9j1Foc">Klaviyo Strategist</a></b><span>Valid to Oct 2028 · ID 196153161</span></div></div>
+<div class="cert k"><img src="assets/badges/klaviyo-practitioner.png" alt="Klaviyo Practitioner badge" width="64" height="64" loading="lazy"><div><b><a href="https://credential.klaviyo.com/3b41f92b-50fc-4364-ac25-dd1759a7e0f0#acc.a7iFz59c">Klaviyo Practitioner</a></b><span>Valid to Oct 2028 · ID 196152367</span></div></div>
+<div class="cert k"><img src="assets/badges/klaviyo-service-practitioner.png" alt="Klaviyo Service Practitioner badge" width="64" height="64" loading="lazy"><div><b><a href="https://credential.klaviyo.com/1f615447-e046-48a6-b4e7-1b6b77332903#acc.eIu4d0gn">Klaviyo Service Practitioner</a></b><span>Valid to Oct 2028 · ID 196146321</span></div></div>
+<div class="cert k"><img src="assets/badges/klaviyo-developer.png" alt="Klaviyo Developer badge" width="64" height="64" loading="lazy"><div><b><a href="https://credential.klaviyo.com/063f9af1-5ae7-4cff-ac5f-acf0057e1c92#acc.78Kb4OQx">Klaviyo Developer</a></b><span>Valid to Sep 2028 · ID 195330342</span></div></div>
+<div class="cert k"><img src="assets/badges/klaviyo-digital-marketing.png" alt="Klaviyo Digital Marketing badge" width="64" height="64" loading="lazy"><div><b><a href="https://credential.klaviyo.com/3fd74d1a-bac6-4d71-bce7-8ed9afe47137#acc.PGwtjglp">Klaviyo Digital Marketing</a></b><span>Klaviyo Academy</span></div></div>
+<div class="cert k"><div><b><a href="https://credential.klaviyo.com/a76d8491-c33e-4b82-8cea-2ae0288e0072">Klaviyo Deliverability</a></b><span>Klaviyo Academy</span></div></div>
+<div class="cert k"><div><b><a href="https://credential.klaviyo.com/6b7e7ae0-ce49-495f-bd1e-e6b59293cb28">Klaviyo Product Certificate</a></b><span>Klaviyo Academy</span></div></div>
+<div class="cert k"><div><b><a href="https://credential.klaviyo.com/440376fa-e716-44d7-bd7b-fcc3bf746cfc">Klaviyo Product Certificate</a></b><span>Klaviyo Academy</span></div></div>
+</div>
+<h3 class="grp">Lifecycle and email platforms</h3>
+<div class="certs">
+<div class="cert"><b><a href="https://www.credential.net/74f924db-ef26-4536-95a1-000a619fb5a5#acc.A7viB0TU">MoEngage Customer Lifecycle Management Expert</a></b><span>April 23, 2024 · Growth Academy</span></div>
+<div class="cert"><b>MoEngage Growth Cohort Analysis</b><span>MoEngage</span></div>
+<div class="cert k doc"><a href="assets/certs/sendinblue-email-marketing.jpg"><img src="assets/certs/sendinblue-email-marketing.jpg" alt="Certification for Email Marketing certificate" width="88" loading="lazy"></a><div><b><a href="assets/certs/sendinblue-email-marketing.jpg">Certification for Email Marketing</a></b><span>Sendinblue (Brevo) Academy · Sep 2021</span></div></div>
+</div>
+<h3 class="grp">HubSpot and email design</h3>
+<div class="certs">
+<div class="cert"><b>HubSpot Email Marketing</b><span>HubSpot Academy</span></div>
+<div class="cert"><b>HubSpot Marketing Software, Inbound and Content Marketing</b><span>HubSpot Academy</span></div>
+<div class="cert k doc"><a href="assets/certs/beefree-hubspot.jpg"><img src="assets/certs/beefree-hubspot.jpg" alt="How to Use HubSpot with Beefree certificate" width="88" loading="lazy"></a><div><b><a href="assets/certs/beefree-hubspot.jpg">How to Use HubSpot with Beefree</a></b><span>Beefree Academy · May 2025</span></div></div>
+<div class="cert k doc"><a href="assets/certs/beefree-101.jpg"><img src="assets/certs/beefree-101.jpg" alt="Beefree 101: A Beginner's Guide certificate" width="88" loading="lazy"></a><div><b><a href="assets/certs/beefree-101.jpg">Beefree 101: A Beginner's Guide</a></b><span>Beefree Academy · May 2025</span></div></div>
+</div>
+<h3 class="grp">Toolkit</h3>
+<ul class="tags"><li>Klaviyo</li><li>MoEngage</li><li>HubSpot</li><li>Salesforce Marketing Cloud</li><li>SendGrid</li><li>Mailchimp</li><li>Omnisend</li><li>Brevo</li><li>Saleshandy</li><li>AMPscript</li><li>HTML/CSS</li><li>MJML</li><li>SQL</li><li>Tableau</li><li>Power BI</li><li>GA4</li><li>Supermetrics</li><li>A/B testing</li><li>Attribution modeling</li><li>Lead scoring</li><li>Lead nurturing</li><li>CRO</li><li>Data privacy QA</li></ul>
+<h3 class="grp">Education</h3>
+<p style="margin:0">B.Tech in Computer Science Engineering, Punjabi University, Patiala</p>
+</div></section>
 
-<section class="section section-soft" id="dashboard">
-  <div class="wrap"><p class="eyebrow">04 / PERFORMANCE & INSIGHTS</p><div class="section-heading"><div><h2>Make the numbers <em>actionable.</em></h2><p>Interactive dashboard concept. Every metric below is fictional sample data, not employer reporting.</p></div><span class="outline-label">FICTIONAL DATA</span></div>
-  <div class="dashboard">
-    <div class="dash-heading"><div><small>DEMO WORKSPACE</small><h3>Lifecycle performance</h3></div><label>Period <select id="periodSelect"><option value="month">Last 30 days</option><option value="quarter">Last 90 days</option></select></label></div>
-    <div class="kpi-grid"><div class="kpi"><span>Attributed revenue</span><strong id="revenueKpi">$84,260</strong><small>Sample value</small></div><div class="kpi"><span>Conversion rate</span><strong id="conversionKpi">3.8%</strong><small>Sample value</small></div><div class="kpi"><span>Repeat purchase</span><strong id="repeatKpi">28.6%</strong><small>Sample value</small></div><div class="kpi"><span>Unsubscribe rate</span><strong id="unsubKpi">0.18%</strong><small>Monitor by segment</small></div></div>
-    <div class="chart-grid"><div class="chart-card"><div class="chart-title"><b>Revenue trend</b><small>Illustrative weekly index</small></div><div class="bar-chart" id="barChart" role="img" aria-label="Illustrative revenue trend"></div><div class="chart-axis"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div></div>
-    <div class="chart-card"><div class="chart-title"><b>Lifecycle mix</b><small>Share of sample revenue</small></div><div class="mix-list"><div><span>Retention <b>34%</b></span><i><span style="width:34%"></span></i></div><div><span>Repeat purchase <b>28%</b></span><i><span style="width:28%"></span></i></div><div><span>Activation <b>22%</b></span><i><span style="width:22%"></span></i></div><div><span>Win-back <b>16%</b></span><i><span style="width:16%"></span></i></div></div></div></div>
-    <div class="recommendation"><span>✳</span><div><b>Suggested next step</b><p id="recommendationText">Compare repeat-purchase rate and unsubscribe rate by cohort; test a relevant post-purchase message against a holdout group.</p></div><button id="refreshInsight">New insight ↻</button></div>
-  </div></div>
-</section>
-
-<section class="section wrap" id="certifications">
-  <p class="eyebrow">05 / CERTIFICATIONS & TOOLKIT</p><div class="section-heading"><div><h2>Learning backed by <em>hands-on work.</em></h2><p>Add exact certificate titles, completion dates and public credential links before sharing.</p></div></div>
-  <div class="credential-grid">
-    <article class="credential"><span class="credential-icon klaviyo">K</span><div><small>KLAVIYO ACADEMY</small><h3>Six completed certifications</h3><p>Add each official certificate title and verification URL in this section.</p><a href="https://academy.klaviyo.com/" target="_blank" rel="noreferrer">Klaviyo Academy ↗</a></div></article>
-    <article class="credential"><span class="credential-icon moengage">M</span><div><small>MOENGAGE</small><h3>Customer Lifecycle Certification</h3><p>Confirm the exact title and attach the credential proof.</p><a href="https://www.moengage.com/" target="_blank" rel="noreferrer">MoEngage ↗</a></div></article>
-    <article class="credential"><span class="credential-icon hubspot">H</span><div><small>HUBSPOT ACADEMY</small><h3>Email Marketing & other certifications</h3><p>List completed courses, completion dates and credential links.</p><a href="https://academy.hubspot.com/" target="_blank" rel="noreferrer">HubSpot Academy ↗</a></div></article>
-    <article class="credential"><span class="credential-icon other">+</span><div><small>OTHER EMAIL MARKETING</small><h3>Additional training</h3><p>Add the issuer, exact certificate name, date and proof link.</p><span class="muted">Credential details to add</span></div></article>
-  </div>
-  <div class="skills"><h3>Technical toolkit</h3><div class="skill-grid"><div><b>Platforms</b><p>Klaviyo · MoEngage · HubSpot · Salesforce Marketing Cloud · SendGrid</p></div><div><b>Lifecycle & CRM</b><p>Journey mapping · Behavioral segmentation · Personalization · Retention · Win-back</p></div><div><b>Engineering & operations</b><p>REST APIs · Webhooks · JSON · HTML/CSS · MJML · QA · Deliverability</p></div><div><b>Measurement</b><p>SQL segmentation · Cohort analysis · GA4 · Tableau · Power BI · A/B testing</p></div></div></div>
-</section>
-
-<section class="section wrap experience">
-  <p class="eyebrow">06 / PROFESSIONAL EXPERIENCE</p><div class="two-col"><div><h2>Scaling execution.<br><em>Keeping outcomes measurable.</em></h2><p><b>WAY.COM · Team Lead – Email Marketing</b><br>May 2025 – Present</p><p class="muted">Figures below are profile-reported. Confirm time periods and attribution before public use.</p></div>
-  <div class="impact-grid"><div><strong>+40%</strong><span>Reported year-over-year revenue growth</span></div><div><strong>+10%</strong><span>Reported month-over-month revenue growth</span></div><div><strong>10M</strong><span>Reported database scale</span></div><div><strong>30–40M</strong><span>Reported emails per month</span></div></div></div>
-  <p class="fine-print">Clarify whether revenue figures are email-attributed or total business revenue. Do not publish confidential dashboards, customer records or proprietary campaign data.</p>
-</section>
-
-<section class="wrap contact-section" id="contact"><div class="contact-card"><p class="eyebrow">07 / LET’S CONNECT</p><h2>Have a lifecycle challenge<br>to <em>solve?</em></h2><p>I’m interested in marketing automation, CRM, lifecycle marketing and marketing operations opportunities where strategy, technology and measurement come together.</p><div class="actions"><a class="button button-mint" href="mailto:kulwindersinghjhinjer@gmail.com?subject=Marketing%20Automation%20Opportunity">Email me ↗</a><a class="button button-outline" href="https://www.linkedin.com/in/kulwindersinghautomation/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div><small>Update the email address and LinkedIn URL if needed.</small></div></section>
+<section id="contact"><div class="wrap">
+<h2>Let's talk about your lifecycle</h2>
+<p class="sub">I'm looking for marketing automation and customer lifecycle management roles, based in India and open to remote work.</p>
+<a class="btn main" href="mailto:kulwindernainewalia19@gmail.com?subject=Lifecycle%20and%20automation%20role">Email me</a>
+<a class="btn alt" href="https://www.linkedin.com/in/kulwindersinghautomation/">LinkedIn</a>
+</div></section>
 </main>
-<footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">KS</span><span>KULWINDER SINGH<small>MARKETING TECHNOLOGY</small></span></a><span>Independent portfolio · Demo metrics are fictional</span><a href="#home">Back to top ↑</a></footer>
-
-<div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close dialog">×</button><div id="modalContent"></div></section></div>
-</body></html>
+<footer><div class="wrap">Kulwinder Singh · Barnala, Punjab, India · Languages: Punjabi, English, Hindi</div></footer>
+</body>
+</html>
