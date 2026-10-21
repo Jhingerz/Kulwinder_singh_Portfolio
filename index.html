@@ -76,6 +76,18 @@ h3.grp{font-size:20px;margin:30px 0 12px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none;margin:0}
 .tags li{border:1px solid var(--line);background:var(--panel);padding:5px 12px;border-radius:99px;font-size:14.5px}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.ai-workflow{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:24px 0}
+.ai-step{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--teal);padding:18px;border-radius:4px;min-width:0}
+.ai-step:nth-child(even){border-top-color:var(--amber)}
+.ai-step .num{font:700 13px "IBM Plex Sans",sans-serif;color:var(--teal);letter-spacing:.08em;text-transform:uppercase}
+.ai-step h3{font-size:19px;margin:8px 0}
+.ai-step p{font-size:15px;margin:0;color:var(--muted)}
+.ai-architecture{background:var(--soft);padding:20px 22px;border-radius:4px;margin:20px 0}
+.ai-architecture h3{font-size:20px;margin-bottom:8px}
+.ai-architecture p{margin:0}
+.ai-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.ai-pills span{border:1px solid var(--line);background:var(--panel);padding:5px 10px;border-radius:99px;font-size:13.5px}
+
 footer{padding:36px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
 @media (max-width:560px){details.stage dl{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid var(--line)}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -84,7 +96,7 @@ footer{padding:36px 0 50px;border-top:1px solid var(--line);color:var(--muted);f
 <body>
 <header><div class="wrap"><nav>
 <b>Kulwinder Singh</b>
-<div><a href="#lifecycle">Lifecycle</a><a href="#impact">Impact</a><a href="#systems">Automation</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></div>
+<div><a href="#lifecycle">Lifecycle</a><a href="#impact">Impact</a><a href="#systems">Automation</a><a href="#ai-workflow">AI Workflow</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></div>
 </nav></div></header>
 
 <main>
@@ -173,7 +185,7 @@ footer{padding:36px 0 50px;border-top:1px solid var(--line);color:var(--muted);f
 
 <section id="systems"><div class="wrap">
 <h2>Automation and deliverability</h2>
-<p class="sub">Automation only works when the data is clean, the sending is trusted and a person approves what goes out.</p>
+<p class="sub">Automation only works when the data is clean, the sending is trusted and a person approves what goes out. I connect AI-assisted workflows with MCP tools and platform APIs to reduce repetitive work across creation, orchestration, QA and reporting.</p>
 <ol class="flow"><li>Input</li><li>Validate</li><li>Connect</li><li>Approve</li><li>Measure</li></ol>
 <div class="two">
 <div><h3 class="grp" style="margin-top:0">Automation</h3><ul>
@@ -189,6 +201,47 @@ footer{padding:36px 0 50px;border-top:1px solid var(--line);color:var(--muted);f
 <li>Compliance review for GDPR, CAN-SPAM and CASL</li>
 <li>Executive dashboards in Tableau, Power BI and GA4</li></ul></div>
 </div>
+</div></section>
+
+
+<section id="ai-workflow"><div class="wrap">
+<h2>AI-enabled marketing operations workflow</h2>
+<p class="sub">A connected operating model for the marketing team: use AI to translate briefs into production-ready assets and workflows, MCP servers to expose approved tools to AI agents, and APIs to execute platform actions. The exact actions depend on each platform's API permissions and available MCP connector.</p>
+
+<div class="ai-architecture">
+<h3>How the system works</h3>
+<p><strong>Marketing brief / business goal → AI orchestration → MCP tools and API calls → platform draft/build → automated QA → human approval → launch → reporting and optimization.</strong> Access is permission-scoped, credentials remain server-side, and high-impact actions such as publishing, sending, or changing live journeys require explicit approval.</p>
+<div class="ai-pills">
+<span>AI orchestration</span><span>MCP server / tools</span><span>REST APIs &amp; webhooks</span><span>ESP / CRM / CDP</span><span>QA &amp; approvals</span><span>Analytics feedback loop</span>
+</div>
+</div>
+
+<div class="ai-workflow">
+<article class="ai-step"><div class="num">01 · Brief</div><h3>Campaign planning</h3><p>Turn a business objective into a campaign brief, audience hypothesis, channel plan, content requirements, timing, success metrics and a task list for the team.</p></article>
+<article class="ai-step"><div class="num">02 · Build</div><h3>Template creation</h3><p>Generate on-brand copy, modular email HTML or MJML, personalization logic and reusable content blocks. Validate required fields, links, tracking parameters and responsive behavior before review.</p></article>
+<article class="ai-step"><div class="num">03 · Activate</div><h3>Campaign setup</h3><p>Where supported by platform APIs, create or update campaign drafts, map approved audiences, configure channel settings, apply UTM conventions and prepare send-time or experiment options.</p></article>
+<article class="ai-step"><div class="num">04 · Orchestrate</div><h3>Flows and journeys</h3><p>Translate lifecycle requirements into triggers, filters, branching rules, delays, exit conditions and suppression logic. Create or update supported journey components, then validate the journey before activation.</p></article>
+<article class="ai-step"><div class="num">05 · Protect</div><h3>Quality and compliance</h3><p>Run automated checks for consent, exclusions, frequency caps, personalization fallbacks, broken links, rendering risks, tracking, naming standards and conflicting journey rules. Route exceptions to the right owner.</p></article>
+<article class="ai-step"><div class="num">06 · Measure</div><h3>Reporting and insights</h3><p>Retrieve available campaign and flow metrics through APIs or approved data sources, normalize them, refresh dashboards and summarize trends, anomalies, cohort performance and recommended next tests.</p></article>
+<article class="ai-step"><div class="num">07 · Improve</div><h3>Optimization loop</h3><p>Use results to suggest subject-line tests, segment refinements, content changes, journey improvements and budget or channel opportunities. Keep recommendations traceable to data and test outcomes.</p></article>
+<article class="ai-step"><div class="num">08 · Coordinate</div><h3>Team task orchestration</h3><p>Assign work by role, track status and dependencies, maintain an audit trail, and notify owners when a draft is ready, a QA check fails, approval is pending or a report needs attention.</p></article>
+</div>
+
+<div class="two">
+<div><h3 class="grp" style="margin-top:0">What MCP and APIs enable</h3><ul>
+<li>MCP provides a consistent tool interface for an AI assistant or agent to discover and call approved actions.</li>
+<li>APIs and webhooks connect campaign platforms, CRM data, content repositories, analytics and task-management tools.</li>
+<li>Reusable prompts, schemas and validation rules help standardize briefs, naming, audience definitions, QA and reporting.</li>
+<li>Read, draft, update and publish permissions should be separated; support varies by platform and endpoint.</li>
+</ul></div>
+<div><h3 class="grp" style="margin-top:0">Human control and safeguards</h3><ul>
+<li>Keep API credentials in a secure server-side secret store; never expose tokens in browser code or prompts.</li>
+<li>Require a named approver before campaign sends, live journey activation, audience changes or destructive actions.</li>
+<li>Log tool calls, inputs, outputs, approvals and failures; use retries and rate limits safely.</li>
+<li>Do not assume every platform exposes template or journey creation through its API—confirm endpoint coverage and MCP tool support first.</li>
+</ul></div>
+</div>
+<p class="k" style="color:var(--muted);font-size:14px;margin-top:18px">Implementation note: this describes an extensible workflow architecture. Actual automation depends on platform API scopes, available MCP tools, account permissions, data access and engineering support.</p>
 </div></section>
 
 <section id="experience"><div class="wrap">
